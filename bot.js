@@ -1,9 +1,10 @@
 const tmi = require('tmi.js');
-const creds = require('./credentials.js')
-const ez = require("./ezcomms.js")
-const quotes = require("./quotes.js")
-const greeting = require("./greeting.js")
-const counter = require("./submodules/counter.js")
+const creds = require('./credentials.js');
+const ez = require("./ezcomms.js");
+const quotes = require("./quotes.js");
+const greeting = require("./greeting.js");
+const counter = require("./submodules/counter.js");
+const so = require("./submodules/shoutout.js");
 
 // Create a client with our options
 const client = new tmi.client(creds.opts);
@@ -80,6 +81,9 @@ function onMessageHandler(channel, context, msg, self) {
         else if(commandName === '!cdown') {
             let status = counter.counterDecrement();
             client.say(channel, status);
+        }
+        else if(commandName.startsWith('!so ')) {
+            so.shoutoutCommand(client, channel, commandName);
         }
     }
 
