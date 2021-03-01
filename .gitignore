@@ -1,0 +1,10 @@
+# Confidential or user specific content
+credentials.js
+data/
+
+# Generated content
+generated_content/
+commandslist/public/index.html
+
+# Things for node and firebase that do not need to be committed
+node_modules/
