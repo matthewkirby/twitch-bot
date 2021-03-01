@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const tmi = require('tmi.js');
 const creds = require('../credentials.js');
 
 // To refresh a token, see the code here: https://dev.twitch.tv/docs/authentication#refreshing-access-tokens
