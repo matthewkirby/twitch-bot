@@ -1,8 +1,8 @@
 const tmi = require('tmi.js');
 const creds = require('./credentials.js');
-const ez = require("./ezcomms.js");
-const quotes = require("./quotes.js");
-const greeting = require("./greeting.js");
+const ez = require("./submodules/ezcomms.js");
+const quotes = require("./submodules/quotes.js");
+const greeting = require("./submodules/greeting.js");
 const counter = require("./submodules/counter.js");
 const so = require("./submodules/shoutout.js");
 

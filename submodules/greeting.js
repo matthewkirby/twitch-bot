@@ -1,4 +1,5 @@
 const usersToGreet = {
+    'xopar': 0,
     'hellknight86': 0
 };
 

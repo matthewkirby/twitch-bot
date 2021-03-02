@@ -1,8 +1,9 @@
-1. Take any personalized things out (only thing left is in `greeting.js`) and store as a dict
-2. For greetings, store the user's login name as well as how I want to greet them. i.e. hellknight86 vs Hellknight
-3. Refactor things into submodules
-4. Make a new dir of things for tools like `twitchAPIAccess.js`
-6. Generalize command lookup using some form of db or object. The object would need props
+- Take any personalized things out (only thing left is in `greeting.js`) and store as a dict
+- For greetings, store the user's login name as well as how I want to greet them. i.e. hellknight86 vs Hellknight
+- Make a new dir of things for tools like `twitchAPIAccess.js`
+- Is there a way to just import things more elegently?
+- Handle paths to generated data from root dir
+- Generalize command lookup using some form of db or object. The object would need props
     - Command to call it
     - Required privledge to call it
     - Points to call it

@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Path to json file of quotes
-dataPath = path.resolve(__dirname, 'data/quote_list.json');
+dataPath = path.resolve(__dirname, '../data/quote_list.json');
 
 // Load quotes from the JSON file
 function loadQuotes() {
