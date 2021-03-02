@@ -2,7 +2,6 @@
 2. For greetings, store the user's login name as well as how I want to greet them. i.e. hellknight86 vs Hellknight
 3. Refactor things into submodules
 4. Make a new dir of things for tools like `twitchAPIAccess.js`
-5. Rename main script
 6. Generalize command lookup using some form of db or object. The object would need props
     - Command to call it
     - Required privledge to call it
