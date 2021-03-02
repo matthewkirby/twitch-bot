@@ -18,8 +18,6 @@ async function shoutoutCommand(client, channel, inputmsg) {
     const msg = `Go check out ${channeldata.broadcaster_name}'s stream over at twitch.tv/${channeldata.broadcaster_login} ! They were last playing ${channeldata.game_name} ~ Be sure to go drop them a follow!`;
 
     // Post in chat
-    console.log(msg);
-    return;
     client.say(channel, msg);
 }
 
