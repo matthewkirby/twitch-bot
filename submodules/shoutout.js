@@ -1,20 +1,12 @@
 const fetch = require('node-fetch');
 const creds = require('../credentials.js');
+const {getAccessToken} = require('../twitchAPIAccess.js');
 
-// To refresh a token, see the code here: https://dev.twitch.tv/docs/authentication#refreshing-access-tokens
-
-// Make a POST request for an auth token
-// fetch(`https://id.twitch.tv/oauth2/token?client_id=${creds.twitchClientID}&client_secret=${creds.twitchClientSecret}&grant_type=client_credentials`, {
-//     method: 'POST'
-// })
-// .then(res => res.json())
-// .then(res => {
-//     console.log(res);
-// });
 
 async function shoutoutCommand(client, channel, inputmsg) {
     // Set up some config
-    const opts = { method: 'GET', headers: {'Client-ID': creds.twitchClientID, 'Authorization': 'Bearer ' + creds.twitchAPIToken} };
+    const twitchAPIToken = await getAccessToken();
+    const opts = { method: 'GET', headers: {'Client-ID': creds.twitchClientID, 'Authorization': 'Bearer ' + twitchAPIToken} };
 
     // Parse channel name
     const channelName = inputmsg.split(' ').slice(1).join(' ');
@@ -26,6 +18,8 @@ async function shoutoutCommand(client, channel, inputmsg) {
     const msg = `Go check out ${channeldata.broadcaster_name}'s stream over at twitch.tv/${channeldata.broadcaster_login} ! They were last playing ${channeldata.game_name} ~ Be sure to go drop them a follow!`;
 
     // Post in chat
+    console.log(msg);
+    return;
     client.say(channel, msg);
 }
 

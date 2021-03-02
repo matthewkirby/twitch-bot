@@ -10,9 +10,12 @@ const opts = {
     channels: ["<Name of the channel to sit in chat>"]
 };
 
+// Client ID for making API requests
+const twitchClientID = "Twitch Client ID";
+const twitchClientSecret = "Twitch Client ID Secret";
 
-// Used for display purposes
+// Channel who's chat is being used, for display purposes
 const channelName = "<Display name of the channel to sit in chat>";
 
-module.exports = { opts, channelName }
+module.exports = { opts, twitchClientID, twitchClientSecret, channelName }
 ```
