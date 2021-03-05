@@ -3,7 +3,7 @@ const path = require('path');
 const hostCommandList = require('../buildCommandList.js');
 
 // Path to json file of commands
-commandPath = path.resolve(__dirname, '../data/command_list.json');
+const commandPath = path.resolve(__dirname, '../data/command_list.json');
 
 // Load commands from the JSON file
 function loadCommands() {
