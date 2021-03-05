@@ -5,6 +5,7 @@ const quotes = require("./submodules/quotes.js");
 const greeting = require("./submodules/greeting.js");
 const counter = require("./submodules/counter.js");
 const so = require("./submodules/shoutout.js");
+const timer = require("./submodules/timer.js")
 
 // Create a client with our options
 const client = new tmi.client(creds.opts);
@@ -84,6 +85,9 @@ function onMessageHandler(channel, context, msg, self) {
         }
         else if(commandName.startsWith('!so ')) {
             so.shoutoutCommand(client, channel, commandName);
+        }
+        else if(commandName.startsWith('!starttimer')) {
+            timer.startTimer(client, channel, commandName);
         }
     }
 
